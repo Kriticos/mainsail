@@ -81,4 +81,55 @@ Cole o seguinte conteúdo dentro do arquivo "config.json" e pressione "Ctrl + X"
     sudo docker run --name mainsail -v "/home/mainsail/config.json:/usr/share/nginx/html/config.json" -p
     ```
 
-Pronto o Mainsail esta sendo executado.
+Pronto o Mainsail esta sendo executado, pode fechar o terminal.
+
+## Bonus
+Executar de forma automatica o Mainsail sempre que vc logar no Windows
+
+1. Abra o bloco de notas e cole o texto abaixo
+    ```
+    wsl -d ubuntu -u root
+    ```
+
+2. Salve dentro da pasta "C:\Scripts" com o nome de mainsail.ps1
+
+3. Abra o agendador de tarefas do windows
+
+    3.1. Click com o botão direito do mouse em "Biblioteca do Agendador de Tarefas e escolha "Criar tarefa basica"
+
+    3.2. De um nome e click em avançar
+
+    3.3. Escolha "Ao fazer logon" e click em Avançar
+
+    3.4. Escolha Iniciar um programa e click em avançar
+
+    3.5. Em Programa/Script coloque
+    ```
+    C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+    ```
+
+    3.6. Em Adicione argumentos (opcional)
+    ```
+    -FILE "C:\Scripts\mainsail.ps1"
+    ```
+
+    3.7. Abra o terminal do Ubuntu
+    ```
+    wsl -d ubuntu -u root
+    ```
+
+    3.8. Configurando o wsl.conf
+    ```
+    nano /etc/wsl.conf
+    ```
+
+    3.9. Adicione ao final do arquivo wsl.conf depois pressione "Ctrl + X" depois "Y" para salvar e "Enter" para sair:
+    ```
+    command = "service docker start"
+    ```
+     3.10. Saia do terminal
+     ```
+     exit
+     ```
+
+
