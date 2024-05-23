@@ -1,4 +1,4 @@
-# Guia para Configurar o WSL e Instalar o Docker
+# Guia para Configurar o WSL e Instalar o Ubuntu e o Docker
 
 ## Passo 1: Configurar o WSL (Windows Subsystem for Linux)
 
