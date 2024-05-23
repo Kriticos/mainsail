@@ -1,4 +1,4 @@
-# Guia para Configurar o WSL e Instalar o Ubuntu e o Docker
+# Mainsail no Ubuntu(WSL) com Docker
 
 ## Passo 1: Configurar o WSL (Windows Subsystem for Linux)
 
