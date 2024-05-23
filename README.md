@@ -8,7 +8,7 @@
    ```powershell
    wsl --install
    ```
-   3. Reinicie o computador.
+3. Reinicie o computador.
 
 ## Passo 2: Instalar o Ubuntu
 1. Abra o Powershell e digite o codigo abaixo e presione enter novamente
@@ -83,7 +83,7 @@ Cole o seguinte conteúdo dentro do arquivo "config.json" e pressione "Ctrl + X"
 
 Pronto o Mainsail esta sendo executado, pode fechar o terminal.
 
-## Bonus
+## Bonus 01
 Executar de forma automatica o Mainsail sempre que vc logar no Windows
 
 1. Abra o bloco de notas e cole o texto abaixo
@@ -131,5 +131,3 @@ Executar de forma automatica o Mainsail sempre que vc logar no Windows
      ```
      exit
      ```
-
-
