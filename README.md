@@ -4,9 +4,9 @@ O procedimento abaixo foi efetuado no Windows 11 23H2
 
 ## Passo 1: Configurar o WSL (Windows Subsystem for Linux)
 
-1.1 Abra o "Prompt de Comando" como Administrador. Para fazer isso, clique com o botão direito no ícone do "Prompt de Comando" e escolha "Executar como administrador".
+1.1. Abra o "Prompt de Comando" como Administrador. Para fazer isso, clique com o botão direito no ícone do "Prompt de Comando" e escolha "Executar como administrador".
 
-1.2 Digite o seguinte comando e pressione Enter: 
+1.2. Digite o seguinte comando e pressione Enter: 
 
 ```powershell
     wsl --install
