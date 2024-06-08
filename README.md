@@ -9,7 +9,7 @@ O procedimento abaixo foi efetuado no Windows 11 23H2
 1.2. Digite o seguinte comando e pressione Enter: 
 
 ```powershell
-    wsl --install
+wsl --install
 ```
 1.3. Reinicie o computador.
 
@@ -21,14 +21,14 @@ O procedimento abaixo foi efetuado no Windows 11 23H2
 
 2.1. Abra o Powershell e digite o codigo abaixo e presione enter novamente
 ```Powershell
-    wsl --install ubuntu 
+wsl --install ubuntu 
 ```
 2.2. Assim que terminar a instalação sera solicitado um nome de usuário. Digite `mainsail` como nome de usuário e crie uma senha quando solicitado.
 
 2.3. Para sair do Ubuntu digite:
 
 ```bash
-    exit
+exit
 ```
 
 ## Passo 3: Instalar o Docker dentro do Ubuntu
@@ -47,52 +47,52 @@ sudo chattr +i /etc/resolv.conf
 
 3.2. Copie e cole cada um dos comandos abaixo, pressionando Enter após cada um:
 ```bash
-    sudo apt-get update
+sudo apt-get update
 ```
 
 ```bash
-    sudo apt-get install ca-certificates curl
+sudo apt-get install ca-certificates curl
 ```
 
 ```bash
-    sudo install -m 0755 -d /etc/apt/keyrings
+sudo install -m 0755 -d /etc/apt/keyrings
 ```
 
 ```bash
-    sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
+sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
 ```
 
 ```bash
-    sudo chmod a+r /etc/apt/keyrings/docker.asc
+sudo chmod a+r /etc/apt/keyrings/docker.asc
 ```
 
 ```bash
-    echo \
-    "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
-    $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
-    sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+echo \
+"deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
+$(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
+sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
  ```
 
 ```bash
-    sudo apt-get update
+sudo apt-get update
  ```
 
 ```bash
-    sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
  ```
 
 ## Passo 4: Baixar a Imagem do Mainsail
 4.1. No terminal do Ubuntu(WSL), cole o seguinte comando e pressione Enter: 
 
 ```bash
-   sudo docker pull ghcr.io/mainsail-crew/mainsail
+sudo docker pull ghcr.io/mainsail-crew/mainsail
 ```
 
 ## Passo 5: Criar o arquivo "config.conf" para o conteiner do Mainsail
 4.2. No terminal do Ubuntu(WSL)
 
 ```bash
-    nano /home/mainsail/config.json
+nano /home/mainsail/config.json
 ```
 
 Cole o seguinte conteúdo dentro do arquivo "config.json" e pressione "Ctrl + X" depois "Y" para salvar e "Enter" para sair:
@@ -107,7 +107,8 @@ Cole o seguinte conteúdo dentro do arquivo "config.json" e pressione "Ctrl + X"
 5.1. No terminal do Ubuntu(WSL), cole o seguinte comando e pressione "Enter":
 
 ```bash
-    sudo docker run --name mainsail -v "/home/mainsail/config.json:/usr/share/nginx/html/config.json" -p
+sudo docker run --name mainsail -v "/home/mainsail/config.json:/usr/share/nginx/html/config.json" -p 80:80 ghcr.io/mainsail-crew/mainsail
+
 ```
 
 Pronto o Mainsail esta sendo executado, pode fechar o terminal.
