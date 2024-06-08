@@ -85,14 +85,14 @@ sudo chattr +i /etc/resolv.conf
 4.1. No terminal do Ubuntu(WSL), cole o seguinte comando e pressione Enter: 
 
 ```bash
-    docker pull ghcr.io/mainsail-crew/mainsail.
+   sudo docker pull ghcr.io/mainsail-crew/mainsail
 ```
 
 ## Passo 5: Criar o arquivo "config.conf" para o conteiner do Mainsail
 4.2. No terminal do Ubuntu(WSL)
 
 ```bash
-    nano /home/mainsail/config.json e pressione Enter.
+    nano /home/mainsail/config.json
 ```
 
 Cole o seguinte conteúdo dentro do arquivo "config.json" e pressione "Ctrl + X" depois "Y" para salvar e "Enter" para sair:
