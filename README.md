@@ -13,7 +13,12 @@ O procedimento abaixo foi efetuado no Windows 11 23H2
 ```
 1.3. Reinicie o computador.
 
+**OBS:** Geralmetne ele ja faz a instalação do Ubuntu. Apos reiniciar sera soliciatado um usuario e senha.
+
 ## Passo 2: Instalar o Ubuntu
+
+**OBS:** Caso durante o passo anterior não tenha sido feito o download do Ubuntu faça o passo 2.1, caso contrario pule para o 2.2
+
 2.1. Abra o Powershell e digite o codigo abaixo e presione enter novamente
 ```Powershell
     wsl --install ubuntu 
@@ -27,6 +32,16 @@ O procedimento abaixo foi efetuado no Windows 11 23H2
 ```
 
 ## Passo 3: Instalar o Docker dentro do Ubuntu
+
+Geralmente apos a instalação do Ubunto ele não acessa a internet pra resolver siga os pasos abaixo:
+
+```bash
+sudo rm /etc/resolv.conf
+sudo bash -c 'echo "nameserver 8.8.8.8" > /etc/resolv.conf'
+sudo bash -c 'echo "[network]" > /etc/wsl.conf'
+sudo bash -c 'echo "generateResolvConf = false" >> /etc/wsl.conf'
+sudo chattr +i /etc/resolv.conf
+```
 
 3.1. Abra o "Powershell" como Administrador novamente.
 
