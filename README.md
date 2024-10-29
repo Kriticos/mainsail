@@ -33,7 +33,7 @@ exit
 
 ## Passo 3: Instalar o Docker dentro do Ubuntu
 
-Geralmente apos a instalação do Ubunto ele não acessa a internet pra resolver siga os pasos abaixo:
+Geralmente apos a instalação do Ubuntu ele não acessa a internet pra resolver siga os pasos abaixo:
 
 ```bash
 sudo rm /etc/resolv.conf
